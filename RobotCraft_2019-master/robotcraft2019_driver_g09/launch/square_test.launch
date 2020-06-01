@@ -1,0 +1,6 @@
+<launch>
+
+	<node pkg="robotcraft2019_driver_g09" type="robotcraft2019_driver_g09_node2" name="robotcraft2019_driver_g09_node2" output="screen"/>
+
+
+</launch>

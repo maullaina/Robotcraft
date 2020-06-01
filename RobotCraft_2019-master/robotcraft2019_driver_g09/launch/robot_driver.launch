@@ -1,0 +1,10 @@
+<launch>
+
+	<node pkg="robotcraft2019_driver_g09" type="robotcraft2019_driver_g09_node1" name="robotcraft2019_driver_g09_node1" output="screen" />
+	<param name="K_psi" type="double" value="1.0" />
+  <param name="K_omega" type="double" value="1" />
+	<param name="p" type="double" value="1" />
+<param name="desired_ang_vel" type="double" value="0.1" />
+<param name="correction_factor" type="double" value="0.85" />
+
+</launch>

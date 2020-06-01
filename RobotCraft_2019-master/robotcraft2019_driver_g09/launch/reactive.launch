@@ -1,0 +1,13 @@
+<launch>
+
+	<!-- <node pkg="stage_ros" type="stageros" name="robotcraft2019_driver_g09" args="$(find robotcraft2019_driver_g09)/world/map.world" /> -->
+
+	<node pkg="robotcraft2019_driver_g09" type="robotcraft2019_driver_g09_node2" name="robotcraft2019_driver_g09_node2" output="screen"/>
+
+  	<param name="desired_right_wall_distance" type="double" value="0.8" />
+	<param name="front_obstacle_distance_threshold" type="double" value="0.6" />
+	<param name="k_p" type="double" value="2.5" />
+	<param name="k_i" type="double" value="0.1" />
+
+
+</launch>

@@ -1,0 +1,34 @@
+<!-- maze.launch: launch gmapping, reactive navigation and robot driver -->
+
+<launch>
+
+    <!-- <include file="$(find robotcraft_maze_real)/launch/gmapping.launch"/> -->
+    <include file="$(find ydlidar)/launch/lidar.launch"/>
+    <include file="$(find robotcraft_maze_real)/launch/robot_firmware.launch"/>
+
+    <!-- Don't forget to create and compile your node and add it here -->
+    <node pkg="robotcraft_maze_real" type="robotcraft_maze_real_reactive_nav" name="robotcraft_maze_real_reactive_nav" output="screen"/>
+    <node pkg="robotcraft_maze_real" type="robotcraft_maze_real_driver" name="robotcraft_maze_real_driver" output="screen"/>
+
+    <!-- Set desired wall to choose which side to follow: 1.0 is right wall, 0.0 is left wall -->	  <param name="initial_y" type="double" value="2.1" />
+    <param name="desired_wall" type="double" value="0.0" />
+
+    <param name="lost_distance" type="double" value="0.5" />
+  	<param name="desired_side_wall_distance" type="double" value="0.20" />
+	<param name="front_obstacle_distance_threshold" type="double" value="0.20" />
+
+
+	<param name="k_p" type="double" value="1.5" />
+	<param name="k_i" type="double" value="0.0" />
+
+    <param name="max_ang" type="double" value="0.5" />
+    <param name="desired_linear_velocity" type="double" value="0.055" />
+    <param name="desired_angular_velicity" type="double" value="0.18" />
+
+    <!-- Set initial position of robot in maze -->
+    <param name="initial_x" type="double" value="0.25" />
+	<param name="initial_y" type="double" value="2.1" />
+    <!-- Theta original in pos x direction -->
+    <param name="initial_theta" type="double" value="0.0" />
+
+</launch>

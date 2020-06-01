@@ -1,33 +1,30 @@
-# RobotCraft_2019
-Work done during RobotCraft 2019 internship
+# robotcraft_maze v0.3 (August 2019)
 
-These packags contain basic framework to solve a simple wall maze with the RobotCraft robot (powered by Arduino Mega 2560
-and Raspberry Pi 3) in simulator and in the real world.
+----
+## General Info
 
-## Submodule descriptions
-### Maze solving in the Stage Simulator
+*robotcraft_maze* package for [ROS Melodic Morenia](http://wiki.ros.org/melodic)
 
-### robotcraft_maze
-Solves the maze using wall following algorithm while also mapping the maze using 2D RPlidar compatible with ROS.
+Author: David Portugal, ISR-UC.
 
-### robotcraft_maze_pro 
-Solves the maze using wave propagation algorithm to compute the shortest path, uses wheel odometry for localization, runs in the Stage Simulator.
+This package contains the basic framework to solve a simple maze with the RobotCraft robot using the Stage Simulator and ROS.
 
-### robotcraft2019_driver_g09
-A square following algorithm can be tested in the Stage simulator, uses rotation and line-following control laws.
+This is part of the ROS course of [RobotCraft](http://robotcraft.ingeniarius.pt).
 
-### Maze solving with the real robot running on Raspberry Pi 3 and Arduino
-### robotcraft_maze_real
-Solves the maze using wall following algorithm and ultrasonic distance sensors while also mapping the maze using 2D RPlidar compatible with ROS.
+----
+## Video
+Have a look at [**this video**](https://youtu.be/2B_4M2gSJ1M) from a previous year for a simple strategy to solve the maze.
 
-### robotcraft_maze_pro_real
-Solves the maze using wave propagation algorithm to compute the shortest path, uses wheel odometry for localization, requires a map of the maze to calculate the shortest path.
+----
+## Development
+Robotcrafters, please create a _maze_solver.cpp_ or a _maze_solver.py_ source file (in the "src" folder) to program your own robots' behavior.
+Please also create a _maze.launch_ launch file (in the "launch" folder) to launch stage and your node.
 
-### robotcraft_maze_pro_real_amcl
-Solves the maze using wave propagation algorithm to compute the shortest path, uses amcl ROS package and a 2D lidar for localization, requires a map of the maze to calculate the shortest path. (was not completed due to hardware problems)
+----
+## Usage
 
-### controllMT
-Motor control package, runs on Arduino Mega 2560, intefaces with Raspberry Pi 3 using rosserial package. Includes model based and standard PI controllers for speed control of the two wheel motors.
+After creating the launch file, just do:
 
-### controllMT_final
-final version of controllMT
+```
+roslaunch robotcraft_maze maze.launch
+```

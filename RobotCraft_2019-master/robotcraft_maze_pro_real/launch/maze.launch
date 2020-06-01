@@ -1,0 +1,30 @@
+<!-- maze.launch: launch stage with a maze_solver node -->
+
+<launch>
+	<!-- Run stage, gmapping and Rviz -->
+    <include file="$(find robotcraft_maze_pro_real)/launch/map_pgm.launch"/>
+    <include file="$(find robotcraft_maze_pro_real)/launch/robot_firmware.launch"/>
+
+    <!-- Run the nodes -->
+    <node pkg="robotcraft_maze_pro_real" type="robotcraft_maze_pro_real_path_following_nav" name="robotcraft_maze_pro_real_path_following_nav" output="screen"/>
+    <node pkg="robotcraft_maze_pro_real" type="robotcraft_maze_pro_real_driver" name="robotcraft_maze_pro_real_driver" output="screen"/>
+
+	<param name="K_psi" type="double" value="0.35" />
+  	<param name="K_omega" type="double" value="0.25" />
+    <param name="p" type="double" value="1.0" />
+
+
+<!--    <param name="x_offset" type="double" value="0.165" /> -->
+<!--    <param name="y_offset" type="double" value="1.1" /> -->
+
+	  <param name="startX" type="int" value="2" />
+	  <param name="startY" type="int" value="1" />
+	  <param name="endX" type="int" value="1" />
+	  <param name="endY" type="int" value="20" />
+
+    <!-- Initial pose of robot in maze on floor -->
+    <param name="initial_x" type="double" value="0.2" />
+	  <param name="initial_y" type="double" value="2.1" />
+	  <param name="initial_theta" type="double" value="0.0" />
+
+</launch>
