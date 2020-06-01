@@ -1,0 +1,24 @@
+[submodule "robotcraft_maze"]
+	path = robotcraft_maze
+	url = git@github.com:BogdanLoewHansen/robotcraft_maze.git
+[submodule "controllMT"]
+	path = controllMT
+	url = git@github.com:BogdanLoewHansen/controllMT.git
+[submodule "robotcraft_maze_pro"]
+	path = robotcraft_maze_pro
+	url = git@github.com:BogdanLoewHansen/robotcraft_maze_pro.git
+[submodule "robotcraft_maze_pro_real_amcl"]
+	path = robotcraft_maze_pro_real_amcl
+	url = git@github.com:BogdanLoewHansen/robotcraft_maze_pro_real_amcl.git
+[submodule "robotcraft_maze_real"]
+	path = robotcraft_maze_real
+	url = git@github.com:emmabailey-uni/robotcraft_maze_real.git
+[submodule "robotcraft_maze_pro_real"]
+	path = robotcraft_maze_pro_real
+	url = git@github.com:emmabailey-uni/robotcraft_maze_pro_real.git
+[submodule "controllMT_final"]
+	path = controllMT_final
+	url = git@github.com:emmabailey-uni/controllMT_final.git
+[submodule "robotcraft2019_driver_g09"]
+	path = robotcraft2019_driver_g09
+	url = git@github.com:emmabailey-uni/robotcraft2019_driver_g09.git
